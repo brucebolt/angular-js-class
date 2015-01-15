@@ -6,11 +6,23 @@ var app = angular.module("exercise",[]);
 
 app.controller("listful",function($scope) {
   // TODO
-  $scope.list = []; // looking a bit bare
+  $scope.list = [
+    { title: 'item a' }, 
+    { title: 'item b' }, 
+    { title: 'item c' },
+  ];
 })
 
 app.controller("tabs",function($scope) {
   // TODO
   // the view is expecting a function to be defined
   // on the scope - can you fill it in?
+  $scope.showTab = function(tabName) {
+    $scope.tab = tabName;
+  };
+  $scope.showTab('a');
+})
+
+app.controller("someController", function($scope) {
+  
 })

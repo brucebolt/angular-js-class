@@ -19,7 +19,7 @@
             Fix up this page. Have a look in console for any errors, then JS &amp; HTML source for hints.
           </div>
 
-          <div ng-controller=defineMe>
+          <div ng-controller=someController>
             <!-- TODO all we need to do here is stop this
               controller throwing an error by defining it
               (can't just delete this div, cheater) -->
@@ -32,7 +32,7 @@
               & implement the show behaviour for the
               default content displayed if the list is empty
               -->
-            <div>Only display me when list is empty</div>
+            <div ng-if='list.length === 0'>Only display me when list is empty</div>
             <p ng-repeat="item in list">
               {{ item.title }}
             </p>
