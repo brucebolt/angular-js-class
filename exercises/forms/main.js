@@ -5,6 +5,8 @@ exercise.controller("BuyShoelaceCtrl", function($scope) {
     // TODO don't run if form is invalid
     // TODO add lace to laces list
     // TODO reset form
+    if($scope.shoelaceForm.$invalid) return;
+    $scope.laces.push($scope.shoelace); 
   } 
 });
 
